@@ -14,7 +14,6 @@ import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
-# Create your views here.
 @login_required(login_url='/login')
 def show_main(request):
     products = Product.objects.filter(user=request.user)
